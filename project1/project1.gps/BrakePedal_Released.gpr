@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <gxl xmlns="http://www.gupro.de/GXL/gxl-1.0.dtd">
-    <graph role="rule" edgeids="false" edgemode="directed" id="release_on_button">
+    <graph role="rule" edgeids="false" edgemode="directed" id="BrakePedal_Released">
+        <attr name="priority">
+            <string>1</string>
+        </attr>
         <attr name="$version">
             <string>curly</string>
         </attr>
         <node id="n0">
             <attr name="layout">
-                <string>292 230 23 18</string>
-            </attr>
-        </node>
-        <node id="n1">
-            <attr name="layout">
-                <string>486 228 58 18</string>
+                <string>9 41 149 72</string>
             </attr>
         </node>
         <edge from="n0" to="n0">
             <attr name="label">
-                <string>type:idle</string>
+                <string>let:status = "pulled"</string>
             </attr>
         </edge>
-        <edge from="n0" to="n1">
+        <edge from="n0" to="n0">
             <attr name="label">
-                <string>del:tap_on</string>
+                <string>type:BrakePedal</string>
             </attr>
         </edge>
-        <edge from="n1" to="n1">
+        <edge from="n0" to="n0">
             <attr name="label">
-                <string>type:onButton</string>
+                <string>test:status= "pushed"</string>
             </attr>
         </edge>
     </graph>

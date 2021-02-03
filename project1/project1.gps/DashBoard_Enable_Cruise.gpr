@@ -1,60 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <gxl xmlns="http://www.gupro.de/GXL/gxl-1.0.dtd">
-    <graph role="type" edgeids="false" edgemode="directed" id="brake_pedal">
+    <graph role="rule" edgeids="false" edgemode="directed" id="DashBoard_Enable_Cruise">
+        <attr name="priority">
+            <string>1</string>
+        </attr>
         <attr name="$version">
             <string>curly</string>
         </attr>
         <node id="n0">
             <attr name="layout">
-                <string>196 76 77 54</string>
+                <string>35 112 86 54</string>
             </attr>
         </node>
         <node id="n1">
             <attr name="layout">
-                <string>200 259 68 18</string>
+                <string>23 28 107 54</string>
             </attr>
         </node>
         <edge from="n0" to="n0">
             <attr name="label">
-                <string>int:saved_speed</string>
+                <string>test:status=="off"</string>
             </attr>
         </edge>
         <edge from="n0" to="n0">
             <attr name="label">
-                <string>string:status</string>
-            </attr>
-        </edge>
-        <edge from="n0" to="n1">
-            <attr name="label">
-                <string>brake</string>
+                <string>let:status = "on"</string>
             </attr>
         </edge>
         <edge from="n0" to="n0">
             <attr name="label">
-                <string>type:idle</string>
-            </attr>
-        </edge>
-        <edge from="n0" to="n0">
-            <attr name="label">
-                <string>int:speed</string>
-            </attr>
-        </edge>
-        <edge from="n1" to="n0">
-            <attr name="label">
-                <string>release_brake</string>
+                <string>type:DashBoard</string>
             </attr>
         </edge>
         <edge from="n1" to="n1">
             <attr name="label">
-                <string>type:brakePedal</string>
+                <string>let:state = "enable"</string>
             </attr>
         </edge>
         <edge from="n1" to="n1">
             <attr name="label">
-                <string>brake</string>
+                <string>type:Controller</string>
             </attr>
-            <attr name="layout">
-                <string>500 0 241 270 240 323 234 268 11</string>
+        </edge>
+        <edge from="n1" to="n1">
+            <attr name="label">
+                <string>test:state=="inactive"</string>
             </attr>
         </edge>
     </graph>

@@ -4,89 +4,74 @@
         <attr name="$version">
             <string>curly</string>
         </attr>
-        <node id="n0">
-            <attr name="layout">
-                <string>272 216 104 72</string>
-            </attr>
-        </node>
         <node id="n2">
             <attr name="layout">
-                <string>565 213 60 18</string>
+                <string>37 63 103 36</string>
             </attr>
         </node>
-        <node id="n4">
+        <node id="n0">
             <attr name="layout">
-                <string>559 332 65 18</string>
-            </attr>
-        </node>
-        <node id="n1">
-            <attr name="layout">
-                <string>562 158 58 18</string>
-            </attr>
-        </node>
-        <node id="n6">
-            <attr name="layout">
-                <string>74 309 68 18</string>
-            </attr>
-        </node>
-        <node id="n5">
-            <attr name="layout">
-                <string>60 177 95 18</string>
+                <string>46 123 82 36</string>
             </attr>
         </node>
         <node id="n3">
             <attr name="layout">
-                <string>562 270 63 18</string>
+                <string>47 184 77 36</string>
             </attr>
         </node>
-        <edge from="n0" to="n0">
-            <attr name="label">
-                <string>let:status = "inactive"</string>
+        <node id="n1">
+            <attr name="layout">
+                <string>47 248 98 72</string>
             </attr>
-        </edge>
-        <edge from="n0" to="n0">
+        </node>
+        <edge from="n2" to="n2">
             <attr name="label">
-                <string>let:speed = 47</string>
-            </attr>
-        </edge>
-        <edge from="n0" to="n0">
-            <attr name="label">
-                <string>let:saved_speed = 0</string>
-            </attr>
-        </edge>
-        <edge from="n0" to="n0">
-            <attr name="label">
-                <string>type:idle</string>
+                <string>type:AcceleratorPedal</string>
             </attr>
         </edge>
         <edge from="n2" to="n2">
             <attr name="label">
-                <string>type:offButton</string>
+                <string>let:status = "pull"</string>
             </attr>
         </edge>
-        <edge from="n4" to="n4">
+        <edge from="n0" to="n0">
             <attr name="label">
-                <string>type:RD_Button</string>
+                <string>type:BrakePedal</string>
             </attr>
         </edge>
-        <edge from="n1" to="n1">
+        <edge from="n0" to="n0">
             <attr name="label">
-                <string>type:onButton</string>
-            </attr>
-        </edge>
-        <edge from="n6" to="n6">
-            <attr name="label">
-                <string>type:brakePedal</string>
-            </attr>
-        </edge>
-        <edge from="n5" to="n5">
-            <attr name="label">
-                <string>type:accelaratePedal</string>
+                <string>let:status = "pull"</string>
             </attr>
         </edge>
         <edge from="n3" to="n3">
             <attr name="label">
-                <string>type:SA_Button</string>
+                <string>let:status = "off"</string>
+            </attr>
+        </edge>
+        <edge from="n3" to="n3">
+            <attr name="label">
+                <string>type:DashBoard</string>
+            </attr>
+        </edge>
+        <edge from="n1" to="n1">
+            <attr name="label">
+                <string>let:speed = 0</string>
+            </attr>
+        </edge>
+        <edge from="n1" to="n1">
+            <attr name="label">
+                <string>let:state = "inactive"</string>
+            </attr>
+        </edge>
+        <edge from="n1" to="n1">
+            <attr name="label">
+                <string>type:Controller</string>
+            </attr>
+        </edge>
+        <edge from="n1" to="n1">
+            <attr name="label">
+                <string>let:savedSpeed = 0</string>
             </attr>
         </edge>
     </graph>
