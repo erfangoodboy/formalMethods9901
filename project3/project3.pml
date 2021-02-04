@@ -51,4 +51,5 @@ init {
 	od
 }
 
+ltl c3 { [](subscriber[1].id == 2) }
 
